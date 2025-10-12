@@ -45,6 +45,7 @@ struct CustomPressableButton: View {
                         .foregroundColor(textColor)
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                         .offset(y: isPressed ? 0 : -offsetY)
+                        .scaleEffect(isPressed ? 0.8 : 1.0)
                 )
                 .onTapGesture {
                     withAnimation(.spring(response: 0.15, dampingFraction: 0.85)) {
@@ -73,7 +74,7 @@ struct CustomPressableButton_Previews: PreviewProvider {
                 buttonColor: .green,
                 shadowColor: .gray.opacity(0.6),
                 buttonHeight: 60,
-                buttonWidth: 300,
+                buttonWidth: 200,
                 textColor: .white
             )
             .padding()
