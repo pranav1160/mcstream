@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 // Triangle shape for value label pointer
 struct Triangle: Shape {
     func path(in rect: CGRect) -> Path {
@@ -19,4 +18,3 @@ struct Triangle: Shape {
         return path
     }
 }
-

@@ -17,7 +17,7 @@ struct CustomPressableButton: View {
     var buttonColor: Color = .blue
     var shadowColor: Color = .gray.opacity(0.7)
     var buttonHeight: CGFloat = 60
-    var buttonWidth: CGFloat? = nil
+    var buttonWidth: CGFloat?
     var textColor: Color = .white
     
     @State private var isPressed = false

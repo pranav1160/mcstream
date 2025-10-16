@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct InfoField: View {
+struct CustomTextField: View {
     let title: String
     @Binding var text: String
     @FocusState var isTyping: Bool
-    var icon: String? = nil
+    var icon: String?
     var isSecure: Bool = false
     
     @State private var isSecureTextVisible = false
@@ -39,11 +39,11 @@ struct InfoField: View {
                         if isSecure {
                             Button(action: {
                                 isSecureTextVisible.toggle()
-                            }) {
+                            }, label: {
                                 Image(systemName: isSecureTextVisible ? "eye.slash.fill" : "eye.fill")
                                     .foregroundColor(isTyping ? .blue : .secondary)
                                     .font(.system(size: 16))
-                            }
+                            })
                         }
                         
                         Image(systemName: icon)
@@ -81,17 +81,17 @@ struct InfoField: View {
 
 #Preview {
     VStack(spacing: 30) {
-        InfoField(title: "First Name", text: .constant(""), icon: "person.fill")
+        CustomTextField(title: "First Name", text: .constant(""), icon: "person.fill")
         
-        InfoField(title: "Last Name", text: .constant(""), icon: "person.fill")
+        CustomTextField(title: "Last Name", text: .constant(""), icon: "person.fill")
         
-        InfoField(title: "Email", text: .constant(""), icon: "envelope.fill")
+        CustomTextField(title: "Email", text: .constant(""), icon: "envelope.fill")
         
-        InfoField(title: "Password", text: .constant(""), icon: "lock.fill", isSecure: true)
+        CustomTextField(title: "Password", text: .constant(""), icon: "lock.fill", isSecure: true)
         
-        InfoField(title: "Phone Number", text: .constant(""), icon: "phone.fill")
+        CustomTextField(title: "Phone Number", text: .constant(""), icon: "phone.fill")
         
-        InfoField(title: "Address", text: .constant(""))
+        CustomTextField(title: "Address", text: .constant(""))
     }
     .padding()
 }

@@ -5,7 +5,6 @@
 //  Created by Pranav on 13/10/25.
 //
 
-
 import SwiftUI
 
 struct CustomSlider: View {
@@ -101,4 +100,3 @@ struct CustomSlider: View {
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: isDragging)
     }
 }
-

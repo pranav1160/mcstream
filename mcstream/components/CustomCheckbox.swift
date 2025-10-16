@@ -5,7 +5,6 @@
 //  Created by Pranav on 13/10/25.
 //
 
-
 import SwiftUI
 
 struct CustomCheckbox: View {
@@ -45,4 +44,3 @@ struct CustomCheckbox: View {
         }
     }
 }
-

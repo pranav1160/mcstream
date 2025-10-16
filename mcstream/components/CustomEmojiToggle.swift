@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct CustomEmojiToggle: View {
     @Binding var isOn: Bool
     var onEmoji: String = "😊"
@@ -52,7 +51,7 @@ struct CustomEmojiToggle: View {
 }
 
 #Preview {
-    VStack{
+    VStack {
         HStack {
             Text("Sleep Mode")
                 .font(.body)
@@ -60,12 +59,8 @@ struct CustomEmojiToggle: View {
             CustomEmojiToggle(isOn: .constant(true),
                         onEmoji: "😊",
                         offEmoji: "😴")
-            
-            
          
         }
-        
 
     }.padding()
 }
-

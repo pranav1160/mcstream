@@ -17,13 +17,12 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            InfoField(
+            CustomTextField(
                 title: "Password",
                 text: $passcode,
                 icon: "lock.fill",
                 isSecure: true
             )
-            
             
             Divider()
             
@@ -34,7 +33,6 @@ struct ContentView: View {
                 CustomCheckbox(isChecked: $task4, label: "Water plants 🌱", accentColor: .green)
             }
             
-            
             Spacer()
         }
     
@@ -44,5 +42,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
-

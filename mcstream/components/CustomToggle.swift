@@ -5,7 +5,6 @@
 //  Created by Pranav on 13/10/25.
 //
 
-
 import SwiftUI
 
 struct CustomToggle: View {
@@ -51,9 +50,8 @@ struct CustomToggle: View {
     }
 }
 
-
 #Preview {
-    VStack{
+    VStack {
         HStack {
             Text("Notifications")
                 .font(.body)
@@ -77,7 +75,6 @@ struct CustomToggle: View {
             )
         }
         
-        
         HStack {
             Text("Vibration")
                 .font(.body)
@@ -90,4 +87,3 @@ struct CustomToggle: View {
         }
     }.padding()
 }
-
